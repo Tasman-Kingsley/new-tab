@@ -12,5 +12,3 @@ document.addEventListener('keydown', (event) => {
     search();
   }
 });
-
-// https://duckduckgo.com/?q=jung&t=h_&ia=web
