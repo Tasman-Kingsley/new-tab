@@ -24,7 +24,7 @@ body {
     grid-template-areas:
         "icon icon"
         "icon icon";
-    grid-template-columns: repeat(6, 100px);
+    grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(4, 100px);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -50,18 +50,21 @@ body {
 }
 
 #searchInput {
-    width: 590px;
+    width: 90vw;
     height: 35px;
     line-height: 35px;
-    font-size: 20px;
+    font-size: 18px;
     border-style: none;
     border-radius: 15px;
     text-indent: 10px;
     padding: 3px 5px;
-    margin-top: 150px;
+    margin-top: 100px;
     font-family: "Roboto Mono", monospace;
 }
 
+#radio-div {
+    padding: 40px 0px;
+}
 
 button {
     background-color: #fff;
@@ -69,7 +72,7 @@ button {
     color: black;
     cursor: pointer;
     font-family: "Roboto Mono", monospace;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 45px;
     height: 45px;
     width: 100px;
@@ -91,5 +94,5 @@ button {
 
   label {
       color: #fff;
-      font-size: 18px;
+      font-size: 16px;
   }

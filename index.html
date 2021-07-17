@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" media="screen and (min-width: 720px)" href="index.css">
+    <link rel="stylesheet" media="screen and (max-width: 720px)" href="mobile.css">
     <title>new-tab</title>
 </head>
 <body>
     <div id="flex-container">
         <div>
-            <input id="searchInput" type="text" value=""><button onclick="search()">Search</button></a>
+            <input id="searchInput" type="text" value="">
         </div>
-        <div>
+        <div id="radio-div">
             <input type="radio" id="goo" name="searchEngine" value="Google" checked>
             <label for="goo">Google</label>
             <input type="radio" id="ddg" name="searchEngine" value="DuckDuckGo">
-            <label for="ddg">DuckDuckGo</label><br>
+            <label for="ddg">DuckDuckGo</label>
+            <button onclick="search()">Search</button></a><br>
+
         </div>
         <div id="grid">
             <div class="icon-div">
