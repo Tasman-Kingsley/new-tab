@@ -62,6 +62,10 @@ body {
     font-family: "Roboto Mono", monospace;
 }
 
+#radio-div {
+    padding: 40px 0px;
+}
+
 
 button {
     background-color: #fff;
