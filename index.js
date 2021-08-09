@@ -7,6 +7,8 @@ function search() {
   }
 }
 
+document.getElementById('searchInput').focus();
+
 document.addEventListener('keydown', (event) => {
   if (event.keyCode === 13) {
     search();
