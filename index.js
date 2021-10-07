@@ -1,9 +1,9 @@
 function search() {
   const sInput = $('#searchInput').val();
-  if ($('#goo').prop('checked')) {
-    window.open(`https://www.google.com/search?q=${sInput}&btnG=Search`, '_self');
+  if ($('#brav').prop('checked')) {
+    window.open(`https://search.brave.com/search?q=${sInput}`, '_self');
   } else {
-    window.open(`https://duckduckgo.com/?q=${sInput}&t=h_&ia=web`, '_self');
+    window.open(`https://www.google.com/search?q=${sInput}`, '_self');
   }
 }
 
