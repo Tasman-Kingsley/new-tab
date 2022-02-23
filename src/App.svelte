@@ -4,10 +4,10 @@
   import { component_subscribe } from "svelte/internal";
   
   let links = [
-    {link: "https://www.youtube.com/", src: "./src/assets/images/youtube.png"},
-    {link: "https://github.com/tasmankingsley", src: "./src/assets/images/github.png"},
-    {link: "https://www.netflix.com/browse", src: "./src/assets/images/netflix.png"},
-    {link: "https://tasmankingsley.github.io/", src: "./src/assets/images/profile.png"},
+    {link: "https://www.youtube.com/", src: "./images/youtube.png"},
+    {link: "https://github.com/tasmankingsley", src: "./images/github.png"},
+    {link: "https://www.netflix.com/browse", src: "./images/netflix.png"},
+    {link: "https://tasmankingsley.github.io/", src: "./images/profile.png"},
   ];
 
   let new_link = "";
