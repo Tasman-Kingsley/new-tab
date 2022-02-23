@@ -5,9 +5,9 @@ let sEngine = 1;
 
 function search() {
   if (sEngine === 1) {
-    window.open(`https://www.google.com/search?q=${sInput}&btnG=Search`, '_self');
+    window.open(`https://search.brave.com/search?q=${sInput}`, '_self');
   } else {
-    window.open(`https://duckduckgo.com/?q=${sInput}&t=h_&ia=web`, '_self');
+    window.open(`https://www.google.com/search?q=${sInput}`, '_self');
   }
 }
 
@@ -16,24 +16,18 @@ function resetSearch() {
 }
 </script>
 
-
 <div>
     <input id="searchInput" type="text" bind:value={sInput} on:click={resetSearch}>
-
     <button on:click={search}>Search</button>
 
-
     <div id="radio-div">
-        
         <label>
             <input type="radio" bind:group={sEngine} name="sEngine" value={1}>
-            Google
+            Brave
         </label>
-
-        
         <label>
             <input type="radio" bind:group={sEngine} name="sEngine" value={2}>
-            DuckDuckGo
+            Google
         </label>
     </div>
 </div>
@@ -59,5 +53,6 @@ function resetSearch() {
 
     button:hover {
         opacity: 0.8;
+        cursor: pointer;
     }
 </style>
