@@ -1,68 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" media="screen and (min-width: 720px)" href="index.css">
-    <link rel="stylesheet" media="screen and (max-width: 720px)" href="mobile.css">
-    <title>new-tab</title>
-</head>
-<body>
-    <div id="flex-container">
-        <div>
-            <input id="searchInput" type="text" value="">
-        </div>
-        <div id="radio-div">
-            <input type="radio" id="brav" name="searchEngine" value="Brave" checked>
-            <label for="brav">Brave</label>
-            <input type="radio" id="goog" name="searchEngine" value="Google">
-            <label for="goog">Google</label>
-            <button onclick="search()">Search</button></a><br>
-
-        </div>
-        <div id="grid">
-            <div class="icon-div">
-                <a href="http://www.youtube.com/"><img class="icon" src="images/youtube.png" alt=""></a>
-            </div>
-            <div class="icon-div">
-                <a href="https://github.com/tasmankingsley"><img class="icon" src="images/github.png" alt=""></a>
-            </div>
-            <div class="icon-div">
-                <a href="https://twitter.com/home"><img class="icon" src="images/twitter.png" alt=""></a>
-            </div>
-            <div class="icon-div">
-                <a href="https://www.reddit.com/"><img class="icon" src="images/reddit.png" alt=""></a>
-            </div>
-            <div class="icon-div">
-                <a href="https://www.netflix.com/browse"><img class="icon" src="images/netflix.png" alt=""></a>
-            </div>
-            <div class="icon-div">
-                <a href="https://tasmankingsley.github.io/"><img class="icon" src="images/profile.png" alt=""></a>
-            </div>
-            <div class="icon-div">
-                <a href="https://ib.nab.com.au/nabib/index.jsp"><img class="icon" src="images/nab.png" alt=""></a>
-            </div>
-            <div class="icon-div">
-                <a href="https://exchange.gemini.com/"><img class="icon" src="images/gemini.jpg" alt=""></a>
-            </div>
-            <div class="icon-div">
-                <a href="https://app.celsius.network"><img class="icon" src="images/celsius.png" alt=""></a>
-            </div>
-            <div class="icon-div">
-                <a href="https://talk.brave.com/"><img class="icon" src="images/brave-talk.png" alt=""></a>
-            </div>
-            <div class="icon-div">
-                <a href="https://mail.protonmail.com/u/0/inbox"><img class="icon" src="images/protonmail.jpg" alt=""></a>
-            </div>
-            <div class="icon-div">
-                <a href="https://artists.spotify.com/c/artist/761DscW9vfSQMmnKEJNHbH/home"><img class="icon" src="images/spotify.png" alt=""></a>
-            </div>
-            
-        </div>
-    </div>
-    
-    <script src="index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel='stylesheet' href='/src/global.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svelte + Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
