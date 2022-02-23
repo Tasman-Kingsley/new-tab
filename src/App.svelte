@@ -1,7 +1,6 @@
 <script>
   import Search from "./lib/Search.svelte";
   import Link from "./lib/Link.svelte";
-  import { component_subscribe } from "svelte/internal";
   
   let links = [
     {link: "https://www.youtube.com/", src: "./images/youtube.png"},
