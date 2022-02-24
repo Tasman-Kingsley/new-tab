@@ -1,6 +1,6 @@
 <script>
 
-let sInput = 'search me';
+let sInput = 'search';
 let sEngine = 1;
 
 function search() {
@@ -17,8 +17,9 @@ function resetSearch() {
 </script>
 
 <div>
-    <input id="searchInput" type="text" bind:value={sInput} on:click={resetSearch}>
-    <button on:click={search}>Search</button>
+    <input id="searchInput" type="text" bind:value={sInput} on:click={resetSearch}
+    on:keydown="{event => event.key === 'Enter' && search()}">
+    <!-- <button on:click={search}>Search</button> -->
 
     <div id="radio-div">
         <label>
@@ -33,22 +34,22 @@ function resetSearch() {
 </div>
 
 <style>
+    div {
+        margin: 10px;
+    }
+
     #radio-div {
         display: flex;
         justify-content: center;
-        margin: 20px 0px;
+        padding: 10px 0px 0px 0px;
     }
 
     #searchInput {
-        width: 70%;
-    }
-
-    input {
-        margin: .5em;
+        width: 100%;
     }
 
     label {
-        margin: .5em;
+        margin: 0rem .5rem;
     }
 
     button:hover {
