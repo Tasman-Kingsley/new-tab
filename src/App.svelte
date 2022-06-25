@@ -82,7 +82,6 @@
 
   span {
     font-size: 1.5rem;
-    /* font-weight: 200; */
     cursor: pointer;
   }
 
