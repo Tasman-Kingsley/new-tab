@@ -43,8 +43,7 @@
 </script>
   
 <main>  
-  <!-- <span>new tab</span> -->
-  <Search/>
+  <!-- <Search/> -->
 
   <span on:click={toggle_visibility} class="edit">{sign}</span>
 
@@ -75,7 +74,6 @@
   main {
     text-align: center;
     padding: 1em;
-    max-width: 500px;
     margin: 0 auto;
     font-family: "Roboto Mono", monospace;
   }
@@ -86,7 +84,8 @@
   }
 
   .edit {
-    text-align: center;
+    right: 0;
+
     font-size: 2rem;
   }
 

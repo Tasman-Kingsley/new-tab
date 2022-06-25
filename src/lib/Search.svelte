@@ -35,17 +35,17 @@ function resetSearch() {
 
 <style>
     div {
-        margin: 10px;
+        padding: 40px;
     }
 
     #radio-div {
         display: flex;
         justify-content: center;
-        padding: 10px 0px 0px 0px;
+        padding: 40px 0px 0px 0px;
     }
 
     #searchInput {
-        width: 100%;
+        width: 80%;
     }
 
     label {
