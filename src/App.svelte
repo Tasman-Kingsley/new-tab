@@ -2,7 +2,7 @@
   import { links } from "./lib/store.js";
   import Search from "./lib/Search.svelte";
   import Link from "./lib/Link.svelte";
-  import { fade } from 'svelte/transition';
+  import { fade, fly } from 'svelte/transition';
 
   let new_link = "";
   let new_src = "";
@@ -39,24 +39,30 @@
 
   <span on:click={toggle_visibility} class="edit">{sign}</span>
 
-  {#if visible}
-    <div in:fade out:fade style="padding: 20px;">
-      <input bind:value={new_link} type="text" placeholder="paste link">
-      <input bind:value={new_src} type="text" placeholder="paste icon link">
-      <button on:click={add_link}>add link</button>
-    </div>
-  {/if}
+  
+  <div class="edit_div" style="height: {visible ? "100px" : "0px"};">
+    {#if visible}
+      <input class="input" bind:value={new_link} type="text" placeholder="paste link" in:fly={{x: -400, duration: 400}}>
+      <input class="input" bind:value={new_src} type="text" placeholder="paste icon link" in:fly={{x: -400, duration: 400}}>
+      <button class="button" on:click={add_link} in:fly={{x: 400, duration: 400}}>add link</button>
+    {/if}
+  </div>
 
 
   <div class="comp_div">
 <!-- loops through the link  component object and displays them -->
     {#each $links as comp, index}
-      <svelte:component this={Link} web_link={comp.link} icon_src={comp.src}/>
+      <div class="inner_comp_div" style="position: relative;">
+        <div style="opacity: {visible ? 0.6 : 1};">
+          <svelte:component this={Link} web_link={comp.link} icon_src={comp.src}/>
+        </div>
+        
 
-<!-- Hides and unhides remove buttons for each component -->
-      {#if visible}
-        <span on:click={() => remove_link(index)} in:fade out:fade>ⓧ</span>
-      {/if}
+  <!-- Hides and unhides remove buttons for each component -->
+        {#if visible}
+          <div class="rm_div" on:click={() => remove_link(index)} in:fade>ⓧ</div>
+        {/if}
+      </div>
     {/each}
   </div>
 
@@ -64,21 +70,33 @@
   
 <style>
   main {
+    display: grid;
+    grid-auto-flow: row;
     text-align: center;
-    padding: 1em;
     margin: 0 auto;
+    padding: 20px;
     font-family: "Roboto Mono", monospace;
   }
 
-  span {
-    font-size: 1.5rem;
+  .edit {
+    top: 0;
+    font-size: 2rem;
     cursor: pointer;
   }
 
-  .edit {
-    right: 0;
+  .edit_div {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    transition: height 0.3s;
+  }
 
-    font-size: 2rem;
+  .button {
+    grid-column: 1 / 3;
+    background-color:#7a879e;
+    color: #fff;
   }
 
   .comp_div {
@@ -86,11 +104,24 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
   }
 
-  span:hover {
-        opacity: 0.8;
+  .rm_div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  .inner_comp_div:hover {
+        opacity: 0.9;
   }
 
   button:hover {
