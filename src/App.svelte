@@ -3,27 +3,19 @@
   import Search from "./lib/Search.svelte";
   import Link from "./lib/Link.svelte";
   import { fade } from 'svelte/transition';
-  
-// Object for all the add-able link components
-  // let links = [
-  //   {link: "https://www.youtube.com/", src: "./images/youtube.png"},
-  //   {link: "https://github.com/tasmankingsley", src: "./images/github.png"},
-  //   {link: "https://www.netflix.com/browse", src: "./images/netflix.png"},
-  //   {link: "https://tasmankingsley.github.io/", src: "./images/profile.png"},
-  // ];
 
   let new_link = "";
   let new_src = "";
   let visible = false;
   let sign = "＋";
 
-  function add_component() {
+  function add_link() {
     $links = [...$links, {link: new_link, src: new_src}]
     new_link = "";
     new_src = "";
   }
 
-  function remove_component(index) {
+  function remove_link(index) {
     $links.splice(index, 1);
     $links = $links;
   }
@@ -51,7 +43,7 @@
     <div in:fade out:fade style="padding: 20px;">
       <input bind:value={new_link} type="text" placeholder="paste link">
       <input bind:value={new_src} type="text" placeholder="paste icon link">
-      <button on:click={add_component}>add link</button>
+      <button on:click={add_link}>add link</button>
     </div>
   {/if}
 
@@ -63,7 +55,7 @@
 
 <!-- Hides and unhides remove buttons for each component -->
       {#if visible}
-        <span on:click={() => remove_component(index)} in:fade out:fade>ⓧ</span>
+        <span on:click={() => remove_link(index)} in:fade out:fade>ⓧ</span>
       {/if}
     {/each}
   </div>
