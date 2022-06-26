@@ -18,7 +18,7 @@
 .icon {
     width: 100px;
     height: 100px;
-    border-radius: 20%;
+    border-radius: 20px;
     margin: 1rem;
 }
 </style>

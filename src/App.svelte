@@ -115,13 +115,18 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    font-size: 2rem;
-    opacity: 0.9;
+    font-size: 2.5rem;
+    opacity: 0.8;
     cursor: pointer;
   }
 
+  .rm_div:hover {
+    color: #e8002f;
+    opacity: 1;
+  }
+
   .inner_comp_div:hover {
-        opacity: 0.9;
+        opacity: 0.8;
   }
 
   button:hover {
