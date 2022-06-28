@@ -70,16 +70,17 @@
   
 <style>
   main {
-    display: grid;
-    grid-auto-flow: row;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: 0 auto;
-    padding: 20px;
     font-family: "Roboto Mono", monospace;
+    width: 90%;
   }
 
   .edit {
     top: 0;
+    padding-top: 20px;
     font-size: 2rem;
     cursor: pointer;
   }
@@ -88,7 +89,7 @@
     display: grid;
     width: 100%;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(150px,  1fr));
     gap: 10px;
     transition: height 0.3s;
   }
