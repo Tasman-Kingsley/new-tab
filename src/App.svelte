@@ -79,7 +79,7 @@
   }
 
   .edit {
-    top: 0;
+    top: 10;
     padding-top: 20px;
     font-size: 2rem;
     cursor: pointer;
