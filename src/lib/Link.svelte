@@ -19,6 +19,6 @@
     width: 100px;
     height: 100px;
     border-radius: 20px;
-    margin: 1rem;
+    margin: 20px;
 }
 </style>

@@ -37,7 +37,7 @@
 <main>  
   <!-- <Search/> -->
 
-  <span on:click={toggle_visibility} class="edit">{sign}</span>
+  <button on:click={toggle_visibility} class="edit">{sign}</button>
 
   
   <div class="edit_div" style="height: {visible ? "100px" : "0px"};">
@@ -79,10 +79,14 @@
   }
 
   .edit {
-    top: 10;
-    padding-top: 20px;
-    font-size: 2rem;
+    margin-top: 20px;
+    width: 100px;
+    place-self: center;
+    font-size: 2.2rem;
+    font-weight: 200;
     cursor: pointer;
+    background-color: transparent;
+    color: #fff;
   }
 
   .edit_div {
